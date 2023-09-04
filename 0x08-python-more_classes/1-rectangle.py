@@ -1,19 +1,42 @@
 #!/usr/bin/python3
+"""Defines a Rectangle class."""
+
+
 class Rectangle:
-    def __init__(self, left_upper: tuple, right_lower: tuple):
-        self.left_upper = left_upper
-        self.right_lower = right_lower
-        self.width = right_lower[0]-left_upper[0]
-        self.height = right_lower[1]-left_upper[1]
+    """Represent a rectangle."""
 
-    def area(self):
-        return self.width * self.height
+    def __init__(self, width=0, height=0):
+        """Initialize a new Rectangle.
 
-    def perimeter(self):
-        return self.width * 2 + self.height * 2
+        Args:
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
+        """
+        self.width = width
+        self.height = height
 
-    def move(self, x_change: int, y_change: int):
-        corner = self.left_upper
-        self.left_upper = (corner[0]+x_change, corner[1]+y_change)
-        corner = self.right_lower
-        self.right_lower = (corner[0]+x_change, corner[1]+y_change)
+    @property
+    def width(self):
+        """Get/set the width of the rectangle."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
+
+    @property
+    def height(self):
+        """Get/set the height of the rectangle."""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
