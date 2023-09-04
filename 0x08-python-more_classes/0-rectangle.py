@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""define a rectangle class"""
+"""define a rectangle class."""
 
 
 
 class Rectangle:
-    """ repressent rectangle"""
+    """ repressent rectangle."""
     pass
