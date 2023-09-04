@@ -1,5 +1,7 @@
+#!/usr/bin/python3
 
 class Rectangle:
+    """function to define rectangle"""
     def __init__(self, left_upper: tuple, right_lower: tuple):
         self.left_upper = left_upper
         self.right_lower = right_lower
