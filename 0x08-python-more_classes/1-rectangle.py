@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 class Rectangle:
     def __init__(self, left_upper: tuple, right_lower: tuple):
         self.left_upper = left_upper
