@@ -1,5 +1,4 @@
 #!/usr/bin/python
-
 """define a class Base model. """
 import json
 import csv
